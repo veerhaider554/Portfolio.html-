@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Haider Portfolio</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    }
+
+    .top-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px #00f7ff;
+    margin-bottom: 30px;
+    }
+
+    .top-box button {
+    background-image: url('/VEER.HTML/veer1.jpg');
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #ff6a00;
+    }
+
+    .top-box button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff6a00, 0 0 30px #ee0979;
+    }
+
+    .bottom-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    min-height: 200px;
+    box-shadow: 0 0 15px #00ffd5;
+    animation: fade 0.4s ease-in-out;
+    }
+
+    @keyframes fade {
+    from { opacity: 0;
+    transform: translateY(10px);
+    }
+    to { opacity: 1;
+    transform: translateY(0);
+    }
+    }
+
+    .profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin: 15px auto;
+    object-fit: cover;
+    box-shadow: 0 0 20px #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>👨‍💻 Haider Abbas Portfolio</h1>
+
+  <div class="top-box">
+    <button onclick="loadSection('home')">Home</button>
+    <button onclick="loadSection('about')">About</button>
+    <button onclick="loadSection('gallery')">Gallery</button>
+    <button onclick="loadSection('contact')">Contact</button>
+  </div>
+
+  <div class="bottom-box" id="content">
+    <img src="VEER.HTML/veer1.jpg" alt="Profile" class="profile-img">
+    <h2>Welcome to my Portfolio</h2>
+    <p>
+      Click the buttons above to explore my work!
+    </p>
+  </div>
+
+  <script>
+    function loadSection(section) {
+    const content = document.getElementById("content");
+    if (section === "home") {
+    content.innerHTML = `
+    <img src="https://via.placeholder.com/120" alt="Profile" class="profile-img">
+    <h2>Welcome to my Portfolio</h2>
+    <p>I build beautiful and modern frontend websites using HTML, CSS, and JavaScript.</p>
+    `;
+    } else if (section === "about") {
+    content.innerHTML = `
+    <h2>About Me</h2>
+    <p>My name is Haider Abbas. I'm a passionate Frontend Developer from Islamabad, Pakistan.</p>
+    <p>I work with HTML, CSS, and JavaScript to build responsive and creative websites.</p>
+    `;
+    } else if (section === "gallery") {
+    content.innerHTML = `
+    <h2>Gallery</h2>
+    <p>Here are some of my design samples and project screenshots.</p>
+    <p>(You can replace this with actual images in future.)</p>
+    `;
+    } else if (section === "contact") {
+    content.innerHTML = `
+    <h2>Contact Me</h2>
+    <p>Email: veerhaider655@gmail.com</p>
+    <p>Phone: 0332-5988165</p>
+    <p>Location: Islamabad, Pakistan</p>
+    `;
+    }
+    }
+  </script>
+
+</body>
+</html>
